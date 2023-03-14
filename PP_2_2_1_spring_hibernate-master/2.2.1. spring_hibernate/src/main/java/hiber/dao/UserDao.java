@@ -10,5 +10,5 @@ public interface UserDao {
    void removeUserById(long id);
 
    void cleanUsersTable();
-   User findUser(String carModel, int carSeries);
+   User findUserByCarModelAndCarSeries(String carModel, int carSeries);
 }

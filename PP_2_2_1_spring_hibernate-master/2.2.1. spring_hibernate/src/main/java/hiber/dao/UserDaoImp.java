@@ -5,7 +5,6 @@ import hiber.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.TypedQuery;
@@ -60,7 +59,7 @@ public class UserDaoImp implements UserDao {
       }
 
    @Override
-   public User findUser(String carModel, int carSeries){
+   public User findUserByCarModelAndCarSeries(String carModel, int carSeries){
       TypedQuery<Car> findCarQuery = sessionFactory.getCurrentSession()
               .createQuery("from Car where model = :carModel and series = :carSeries")
               .setParameter("carModel", carModel)

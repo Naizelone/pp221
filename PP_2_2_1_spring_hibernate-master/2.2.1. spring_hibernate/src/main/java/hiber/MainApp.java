@@ -40,7 +40,7 @@ public class MainApp {
          System.out.println();
       }
 
-      System.out.println(userService.findUser("Porsche", 911));
+      System.out.println(userService.findUserByCarModelAndCarSeries("Porsche", 911));
 
       context.close();
    }
